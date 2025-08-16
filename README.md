@@ -34,7 +34,7 @@ Before starting, make sure you have:
 
 ## 🚀 Step-by-Step Setup
 
-### **1️⃣ Create BankerBot in Amazon Lex**
+## 1️. Create BankerBot in Amazon Lex
 
 **Log in to AWS** → Open **Amazon Lex** → Create a bot:
 
@@ -47,7 +47,7 @@ Before starting, make sure you have:
 
 ---
 
-### **2️⃣ Create WelcomeIntent**
+## 2. Create WelcomeIntent
 
 **Purpose:** Greet the user when they say hello.
 
@@ -73,7 +73,7 @@ Test with:
 
 ---
 
-### **3️⃣ Configure FallbackIntent**
+## 3. Configure FallbackIntent
 
 **Purpose:** Handle unrecognized inputs gracefully.
 
@@ -90,7 +90,7 @@ Test with:
 
 ---
 
-### **4️⃣ Create a Custom Slot: `accountType`**
+## 4. Create a Custom Slot: `accountType`
 
 1. **Go to "Slot types"** → Create new:
 - **Name:** `accountType`
@@ -110,7 +110,7 @@ Test with:
 
 ---
 
-### **5️⃣ Create CheckBalance Intent**
+## 5. Create CheckBalance Intent
 
 **Purpose:** Let users check account balances.
 
@@ -143,7 +143,7 @@ Test by passing both account type & date of birth:
 
 ---
 
-### **6️⃣ Create AWS Lambda Function**
+## 6️. Create AWS Lambda Function
 
 **Purpose:** Generate random balances for the chatbot.
 
@@ -158,13 +158,13 @@ Test by passing both account type & date of birth:
 
 
 
-7️⃣ Connect Lex and Lambda
+## 7. Connect Lex and Lambda
 Go to BankerBot → Aliases → TestBotAlias
 
 Associate Lambda function (BankerBotLambda)
 Keep version as $LATEST.
 
-8️⃣ Link Lambda to CheckBalance Intent
+## 8. Link Lambda to CheckBalance Intent
 In CheckBalance Intent → Fulfilment,
 Choose Use a Lambda function for fulfillment.
 
@@ -172,7 +172,7 @@ Select BankerBotLambda.
 
 Save → Build → Test.
 
-9️⃣ Test the Full Flow
+## 9 Test the Full Flow
 - Ask this :
 What's the balance in my checking account? My birthday is 2000-01-15.
 - Expected Response Something like this :
